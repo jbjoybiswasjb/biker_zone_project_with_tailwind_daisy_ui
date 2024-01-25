@@ -30,7 +30,9 @@
                 theme: {
                     extend: {
                         colors: {
+                            clifford: '#da373d',
                             common_color_1: '#E76F51',
+                            slider_bg_color: 'rgba(231, 111, 81, 0.10)',
                         }
                     }
                 }
@@ -40,19 +42,18 @@
 
         <!-- Style CSS. -->
         <style>
-
             /* Google fonts. */
             .poppins_font {
                 font-family: 'Poppins', sans-serif;
             }
+
             .inter_font {
                 font-family: 'Inter', sans-serif;
             }
+
             .monrope_font {
                 font-family: 'Manrope', sans-serif;
             }
-
-
         </style>
 
     </head>
@@ -64,38 +65,149 @@
             ===================================================================================
          -->
         <header class="md:container md:mx-auto">
-            <div class="navbar bg-base-100">
-                <div class="flex-1">
-                    <div class="dropdown">
-                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h8m-8 6h16" />
-                            </svg>
+
+            <!-- Nav section. -->
+            <nav>
+                <div class="navbar bg-base-100">
+                    <div class="flex-1">
+                        <div class="dropdown">
+                            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h8m-8 6h16" />
+                                </svg>
+                            </div>
+                            <ul tabindex="0"
+                                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-base">
+                                <li><a>Home</a></li>
+                                <li><a>Shop</a></li>
+                                <li><a>News</a></li>
+                                <li><a>Contact</a></li>
+                            </ul>
                         </div>
-                        <ul tabindex="0"
-                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-base">
+                        <a class="btn btn-ghost text-4xl">Biker Zone</a>
+                    </div>
+                    <div class="navbar-center hidden lg:flex">
+                        <ul class="menu menu-horizontal px-1 text-base">
                             <li><a>Home</a></li>
                             <li><a>Shop</a></li>
                             <li><a>News</a></li>
                             <li><a>Contact</a></li>
                         </ul>
                     </div>
-                    <a class="btn btn-ghost text-4xl">Biker Zone</a>
+                    <div class="">
+                        <a class="btn bg-common_color_1 text-white">Login</a>
+                    </div>
                 </div>
-                <div class="navbar-center hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1 text-base">
-                        <li><a>Home</a></li>
-                        <li><a>Shop</a></li>
-                        <li><a>News</a></li>
-                        <li><a>Contact</a></li>
-                    </ul>
+            </nav>
+
+            <!-- Slider and carousel section. -->
+            <section>
+                <div class="carousel w-full bg-slider_bg_color lg:h-[550px]">
+
+                    <!-- Slide one. -->
+                    <div id="slide1" class="carousel-item relative w-full">
+                        <div class="flex flex-col lg:flex-row gap-8 lg:gap-20 p-5 lg:p-24">
+                            <div class="space-y-7 flex-1">
+                                <h2 class="text-6xl font-bold">
+                                    Ride-on R15 V4 <br>
+                                    with Smile
+                                </h2>
+                                <p>
+                                    Amet minim mollit non deserunt ullamco
+                                    est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                                </p>
+                                <button class="btn bg-common_color_1 text-white">Purchase</button>
+                            </div>
+
+                            <div class="flex-1">
+                                <img src="images/slider/bike1.png" class="w-[400px]" />
+                            </div>
+                        </div>
+                        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide4" class="btn btn-circle">❮</a>
+                            <a href="#slide2" class="btn btn-circle">❯</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide two. -->
+                    <div id="slide2" class="carousel-item relative w-full">
+                        <div class="flex flex-col lg:flex-row gap-8 lg:gap-20 p-5 lg:p-24">
+                            <div class="space-y-7 flex-1">
+                                <h2 class="text-6xl font-bold">
+                                    Ride-on R15 V4 <br>
+                                    with Smile
+                                </h2>
+                                <p>
+                                    Amet minim mollit non deserunt ullamco
+                                    est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                                </p>
+                                <button class="btn bg-common_color_1 text-white">Purchase</button>
+                            </div>
+                        
+                            <div class="flex-1">
+                                <img src="images/slider/bike2.png" class="w-[400px]" />
+                            </div>
+                        </div>
+                        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide1" class="btn btn-circle">❮</a>
+                            <a href="#slide3" class="btn btn-circle">❯</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide three. -->
+                    <div id="slide3" class="carousel-item relative w-full">
+                        <div class="flex flex-col lg:flex-row gap-8 lg:gap-20 p-5 lg:p-24">
+                            <div class="space-y-7 flex-1">
+                                <h2 class="text-6xl font-bold">
+                                    Ride-on R15 V4 <br>
+                                    with Smile
+                                </h2>
+                                <p>
+                                    Amet minim mollit non deserunt ullamco
+                                    est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                                </p>
+                                <button class="btn bg-common_color_1 text-white">Purchase</button>
+                            </div>
+                        
+                            <div class="flex-1">
+                                <img src="images/slider/bike3.png" class="w-[400px]" />
+                            </div>
+                        </div>
+                        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide2" class="btn btn-circle">❮</a>
+                            <a href="#slide4" class="btn btn-circle">❯</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide Four. -->
+                    <div id="slide4" class="carousel-item relative w-full">
+                        <div class="flex flex-col lg:flex-row gap-8 lg:gap-20 p-5 lg:p-24">
+                            <div class="space-y-7 flex-1">
+                                <h2 class="text-6xl font-bold">
+                                    Ride-on R15 V4 <br>
+                                    with Smile
+                                </h2>
+                                <p>
+                                    Amet minim mollit non deserunt ullamco
+                                    est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                                </p>
+                                <button class="btn bg-common_color_1 text-white">Purchase</button>
+                            </div>
+                        
+                            <div class="flex-1">
+                                <img src="images/slider/bike4.png" class="w-[400px]" />
+                            </div>
+                        </div>
+                        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide3" class="btn btn-circle">❮</a>
+                            <a href="#slide1" class="btn btn-circle">❯</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="">
-                    <a class="btn bg-common_color_1 text-white">Login</a>
-                </div>
-            </div>
+            </section>
+
         </header>
 
         <!-- 
